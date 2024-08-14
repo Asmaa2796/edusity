@@ -70,12 +70,14 @@ const Courses = () => {
                               alt=""
                             />
                           )}
+                          <br/>
                           <Link
                             to={`/details/${course.id}/${course.title.replace(
                               /\s+/g,
                               "_"
                             )}`}
                           >
+                            
                             <button className="button text-sm mt-3 mb-1">
                               More details
                             </button>
@@ -127,6 +129,7 @@ const Courses = () => {
                               alt=""
                             />
                           )}
+                          <br/>
                           <Link
                             to={`/details/${course.id}/${course.title.replace(
                               /\s+/g,
