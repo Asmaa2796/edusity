@@ -9,7 +9,7 @@ const Categories = () => {
   useEffect(() => {
     dispatch(getCategories());
     console.log(getCategories())
-  }, []);
+  }, [dispatch]);
 
   const dataCategs = useSelector((state) => state.categoriesList);
   useEffect(() => {

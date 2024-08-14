@@ -12,7 +12,7 @@ const Courses = () => {
   useEffect(() => {
     dispatch(getCourses());
     console.log(getCourses());
-  }, []);
+  }, [dispatch]);
 
   const dataCourses = useSelector((state) => state.filteredCourses);
   useEffect(() => {

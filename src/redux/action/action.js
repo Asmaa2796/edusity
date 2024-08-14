@@ -3,7 +3,6 @@ import {
   categoriesType,
   coursesType,
   coursesCategory,
-  relatedCourses,
   freeCourses,
   newCourses,
   PlayVideo,
