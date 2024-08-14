@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Home from "./components/Home";
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import PricingPage from "./components/PricingPage";
+import ScrollTop from "./components/ScrollTop";
+import ContactUsPage from "./components/ContactUsPage";
+import ProgramPage from "./components/ProgramPage";
+import AboutUsPage from "./components/AboutUsPage";
+import CourseDetails from "./components/CourseDetails";
+import AllCourses from "./components/AllCourses";
+import NotFound from "./components/NotFound";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/About" element={<AboutUsPage />} />
+          <Route path="/Pricing" element={<PricingPage />} />
+          <Route path="/ContactUs" element={<ContactUsPage />} />
+          <Route path="/Program" element={<ProgramPage />} />
+          <Route path="/details/:id/:title" element={<CourseDetails />} />
+          <Route path="/Courses" element={<AllCourses />} />
+          <Route path="/AllCourses" element={<AllCourses />} />
+          <Route path="*" element={<NotFound/>} />
+        </Routes>
+
+        <ScrollTop />
+        <Footer />
+      </BrowserRouter>
+    </>
   );
 }
 
