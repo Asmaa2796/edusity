@@ -11,7 +11,7 @@ const Footer = () => {
           </div>
           <div className="col-lg-6 col-md-6 col-12">
             <div className="copyright">
-              All rights reserved &copy; Asmaa Saad
+              All rights reserved &copy; Asmaa Saad 2024
             </div>
           </div>
         </div>
